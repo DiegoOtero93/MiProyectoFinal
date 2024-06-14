@@ -1,0 +1,131 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font: italic 1.2rem "Fira Sans", serif;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff5e; /* Color de fondo del header, puedes cambiarlo según tu diseño */
+}
+
+.lista__header {
+    display: flex;
+}
+
+.lista__header li {
+    margin-right: 20px; /* Reducido el margen entre los elementos de la lista */
+    list-style: none;
+    font-size: 1.5rem; /* Reducido el tamaño del texto en el menú para dispositivos móviles */
+}
+
+.lista__header li a {
+    text-decoration: none; /* Quita el subrayado */
+    color: rgb(9, 9, 9); /* Color del texto */
+    transition: color 0.3s; /* Transición de color suave */
+}
+
+.lista__header li a:hover {
+    color: #4CAF50; /* Cambia el color del texto al hacer hover */
+}
+
+/* Contenedor de las cards */
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.card__img {
+    width: 400px;
+    height: 300px;
+    margin: 10px;
+    border: 2px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 0 4px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: block;
+    margin: 0 auto;
+}
+
+.card__img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+.footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__logo img {
+    width: 100px;
+    height: auto;
+}
+
+.footer__legal-links a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer__legal-links span {
+    color: #666;
+}
+
+.footer__social {
+    display: flex;
+    font-size: 2rem;
+}
+
+.social-icon {
+    margin: 0 10px;
+    color: #333;
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .lista__header {
+        flex-direction: column; /* Cambia la dirección del flexbox a columna para el menú */
+        align-items: center; /* Centra los elementos del menú */
+    }
+
+    .lista__header li {
+        margin: 10px 0; /* Espaciado entre elementos del menú */
+        font-size: 1.2rem; /* Tamaño de fuente más pequeño */
+    }
+
+    .card__img {
+        width: 100%; /* Imágenes ocupan el ancho completo del contenedor */
+        height: auto; /* Altura automática para mantener la proporción */
+    }
+}
+
+/* Media Queries para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .lista__header li {
+        margin-right: 30px; /* Ajuste de margen entre elementos de la lista para tablets */
+        font-size: 1.8rem; /* Tamaño de fuente más grande para tablets */
+    }
+
+    .card__img {
+        width: 300px; /* Tamaño de las imágenes reducido para tablets */
+        height: 225px;
+        margin: 15px; /* Margen aumentado para tablets */
+    }
+}

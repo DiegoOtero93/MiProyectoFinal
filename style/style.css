@@ -1,0 +1,516 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font: italic 1.2rem "Fira Sans", serif;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.36); /* Color de fondo con transparencia */
+}
+
+.lista__header {
+    display: flex;
+    gap: 20px; /* Espacio entre elementos de la lista */
+}
+
+.lista__header li {
+    list-style: none;
+    font-size: 2rem;
+}
+
+.lista__header li a {
+    text-decoration: none;
+    color: #090909;
+    transition: color 0.3s;
+}
+
+.lista__header li a:hover {
+    color: #4CAF50;
+}
+
+.imagenLogo {
+    width: 5rem;
+    height: 5rem;
+}
+
+/* Carrusel */
+.carrusel {
+    width: 100%;
+    height: 33rem;
+    overflow: hidden;
+    position: relative; /* Añadido: posición relativa para diapositivas */
+}
+
+.diapositiva {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+   
+}
+
+.diapositiva img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    animation: aparecerDesvanecer 8s infinite;
+}
+
+@keyframes aparecerDesvanecer {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.texto {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Botones carrusel */
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #4546a0c8;
+}
+
+.botonAtras {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    z-index: 1;
+    font-size: 2rem;
+}
+
+.botonAdelante {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    z-index: 1;
+    font-size: 2rem;
+}
+
+/* Sección principal de textos */
+.Textos__principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px; /* Añadido: padding para dispositivos pequeños */
+}
+
+.Texto__princpilaH1 {
+    font-size: 3rem;
+    margin: 1rem;
+    color: #fdfdfdd1;
+}
+
+.Texto__princpilaH2 {
+    font-size: 1.4rem;
+    margin: 1rem;
+    color: #d3d2d2e3;
+}
+
+.Texto__distribuidores {
+    text-align: center; /* Centra horizontalmente el texto */
+    margin-bottom: 20px; /* Espacio inferior para separar del contenido siguiente */
+    color: rgba(246, 246, 246, 0.858);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* Cards */
+.productos {
+    padding: 20px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Centra las cards horizontalmente */
+}
+
+.card {
+    position: relative;
+    flex: 1 0 calc(33.333% - 20px);
+    min-width: 250px;
+    height: 250px;
+    background-color: #f8f8f800;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 0 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-size: contain; /* Ajusta el tamaño de la imagen */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+/* Elimina el ::before */
+.card::before {
+    content: none;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.card:hover::before {
+    opacity: 0;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card1 {
+    background-image: url("../media/cocina1.jpg");
+    cursor: pointer;
+    border-radius: 1rem;
+}
+
+.card2 {
+    background-image: url("../media/carrusel2.jpg");
+}
+
+.card3 {
+    background-image: url("../media/puertaExterior.jpg");
+}
+
+.card4 {
+    background-image: url("../media/EscaleraMadera.jpg");
+}
+
+.card5 {
+    background-image: url("../media/juegoComedor.jpg");
+}
+
+.card6 {
+    background-image: url("../media/carrusel6.jpg");
+}
+/* Media queries para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .cards {
+        display: block; /* Cambia a bloque en dispositivos móviles */
+        gap: 20px; /* Espacio entre las cards */
+    }
+    
+    .card {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        margin-bottom: 20px; /* Espacio entre las cards */
+    }
+
+    .card img {
+        width: 100%;
+        height: auto; /* Ajusta la altura automáticamente */
+    }
+
+    .card .texto {
+        font-size: 14px; /* Tamaño de fuente adecuado para móviles */
+        /* Otros estilos según sea necesario */
+    }
+}
+
+.imagen__ocultas {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    visibility: hidden;
+}
+
+/* Footer */
+.footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__logo img {
+    width: 100px;
+    height: auto;
+}
+
+.footer__legal-links a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer__legal-links span {
+    color: #666;
+}
+
+.footer__social {
+    display: flex;
+    font-size: 2rem;
+}
+
+.social-icon {
+    margin: 0 10px;
+    color: #333;
+}
+
+/* Carrusel de logos */
+.marcas-carrusel {
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Ajusta automáticamente el tamaño de las columnas */
+    gap: 20px; /* Espacio entre los logos */
+    overflow: hidden; /* Para ocultar los logos que están fuera del contenedor */
+    justify-items: center; /* Centra los logos horizontalmente */
+    align-items: center; /* Centra los logos verticalmente */
+    width: 80%; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenedor horizontalmente */
+}
+
+.logos-container img {
+    width: 100%; /* Ajusta el ancho de las imágenes al 100% del contenedor */
+    height: auto; /* Altura automática para mantener la proporción */
+    animation: fade 10s linear infinite;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+}
+
+/* Media Queries */
+@media only screen and (max-width: 600px) {
+    /* Header */
+    .header {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .lista__header {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+    .lista__header li {
+        margin: 10px 0;
+    }
+
+    /* Main */
+    .Textos__principal {
+        padding: 20px;
+    }
+    .Textos__principal h1 {
+        font-size: 2.5rem;
+    }
+    .Textos__principal h2 {
+        font-size: 1rem;
+    }
+    .contenedor__texto {
+        position: relative;
+        top: 30%;
+        left: 5%;
+        width: 90%;
+    }
+
+    /* Cards */
+    .card {
+        flex: 1 0 100%;
+        min-width: auto;
+        height: auto;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    /* Header */
+    .header {
+        padding: 15px 20px;
+    }
+    .lista__header li {
+        margin: 0 20px;
+    }
+
+    /* Main */
+    .Textos__principal {
+        padding: 30px;
+    }
+    .Textos__principal h1 {
+        font-size: 3rem;
+    }
+    .Textos__principal h2 {
+        font-size: 1.5rem;
+    }
+    .contenedor__texto {
+        position: relative;
+        top: 30%;
+        left: 5%;
+        width: 50%;
+    }
+
+    /* Cards */
+    .card {
+        flex: 1 0 calc(50% - 20px);
+        min-width: auto;
+        height: auto;
+    }
+}
+
+/* Estilos para el formulario de contacto */
+.formulario-contacto {
+    background-color: #f8f9fa;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(236, 235, 235, 0.1);
+}
+
+.formulario-contacto {
+    background-color: rgba(248, 249, 250, 0.175); /* Fondo ligeramente transparente */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-contacto form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.formulario-contacto label {
+    font-size: 1.2rem;
+    color: #f4f4f4d6;
+}
+.contacta__conNosotros{
+    background-color: rgba(255, 255, 255, 0.722);
+}
+.boton__elegir__archivo{
+    color: rgba(255, 255, 255, 0.504);
+}
+
+.formulario-contacto input[type="text"],
+.formulario-contacto input[type="email"],
+.formulario-contacto textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.formulario-contacto textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.formulario-contacto input[type="file"] {
+    border: none;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.formulario-contacto input[type="file"]:hover {
+    background-color: #4546a0c8;
+}
+
+.formulario-contacto button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: flex-start;
+    max-width: 150px;
+}
+
+.formulario-contacto button[type="submit"]:hover {
+    background-color: #4546a0c8;
+}
+
+.video-fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Coloca el video detrás de otros elementos */
+}
+
+#video-fondo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta el video para cubrir todo el contenedor */
+}
+
+.contenido-sobre-video {
+    position: relative; /* Asegura que el contenido principal esté posicionado sobre el video */
+    z-index: 1; /* Asegura que el contenido esté delante del video de fondo */
+}

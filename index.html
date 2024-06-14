@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Mi proyecto final</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo__logo">
+            <img src="./media/imagenlogoempresa.jpg" class="imagenLogo" alt="Logo de la carpintería">
+        </div>
+        <nav class="nav__header">
+            <ul class="lista__header">
+                <!-- Enlaces a las secciones -->
+                <li class="header__opcionesLista"><a href="inicio.html">Inicio</a></li>
+                <li class="header__opcionesLista"><a href="nosotros.html">Nosotros</a></li>
+                <li class="header__opcionesLista"><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+        <div class="carrusel">
+            <button type="button" id="atras" class="botonAtras">&leftarrow;</button>
+            <div class="diapositiva">
+                <img id="imagen1" src="./media/carrusel1.jpg" alt="Tarima exterior marron">
+                
+            </div>
+            <div class="diapositiva">
+                <img id="imagen2" src="./media/carrusel2.jpg" alt="Forrado madera exterior marron">
+                
+            </div>
+            <div class="diapositiva">
+                <img id="imagen3" src="./media/carrusel3.jpg" alt="Barra de restaurante">
+            </div>
+            <div class="diapositiva">
+                <img id="imagen4" src="./media/carrusel6.jpg" alt="Restaurante comida rapida">
+            </div>
+            <div class="diapositiva">
+                <img id="imagen5" src="./media/carrusel5.jpg" alt="Cocina">
+            </div>
+
+            <button type="button" id="delante" class="botonAdelante">&rightarrow;</button>
+         </div>
+
+         <!-- Sección con texto principal -->
+         <section class="Textos__principal">
+            <h1 class="Texto__princpilaH1">Bienvenido a Carpintería ADOA</h1>
+            <h2 class="Texto__princpilaH2">Llevamos 35 años realizando todo tipo de trabajos personalizados en madera.
+                Buscamos un acabado perfecto, por ello trabajamos con los mejores materiales y los profesionales
+                expertos. ¡Tenemos madera de buenos carpinteros! </h2>
+         </section>
+
+         <!-- Sección de cards (artículos) -->
+         <section class="productos" id="productos">
+            <div class="cards">
+
+                <!-- Segundo artículo -->
+                <a href="detalles_card2.html" title="Detalles del segundo artículo">
+                    <article class="card card2 agrandar">
+                        <div id="detalleCardContainer"></div>
+                        <picture>
+                            <source srcset="./media/maderaExterior-large.jpeg" media="(min-width: 1200px)">
+                            <source srcset="./media/maderaExterior-medium.jpeg" media="(min-width: 768px)">
+                            <img src="./media/maderaExterior.jpeg" alt="Tarima exterior marron jardin"
+                                class="card__img imagen__ocultas" loading="lazy">
+                        </picture>
+                        <picture>
+                            <source srcset="./media/tarimaexterior-large.jpg" media="(min-width: 1200px)">
+                            <source srcset="./media/tarimaexterior-medium.jpg" media="(min-width: 768px)">
+                            <img src="./media/tarimaexterior.jpg" alt="Tarima exterior marron jardin"
+                                class="card__img imagen__ocultas" loading="lazy">
+                        </picture>
+                        <picture>
+                            <source srcset="./media/tarimaexterior3-large.jpg" media="(min-width: 1200px)">
+                            <source srcset="./media/tarimaexterior3-medium.jpg" media="(min-width: 768px)">
+                            <img src="./media/tarimaexterior3.jpg" alt="Piscina tarima exterior"
+                                class="card__img imagen__ocultas" loading="lazy">
+                        </picture>
+                        <picture>
+                            <source srcset="./media/tarimaexterior2-large.jpg" media="(min-width: 1200px)">
+                            <source srcset="./media/tarimaexterior2-medium.jpg" media="(min-width: 768px)">
+                            <img src="./media/tarimaexterior2.jpg" alt="Forrado de piscina tarima exterior"
+                                class="card__img imagen__ocultas" loading="lazy">
+                        </picture>
+                        <picture>
+                            <source srcset="./media/tarimaexterior4-large.jpg" media="(min-width: 1200px)">
+                            <source srcset="./media/tarimaexterior4-medium.jpg" media="(min-width: 768px)">
+                            <img src="./media/tarimaexterior4.jpeg" alt="Forrado de piscina tarima exterior"
+                                class="card__img imagen__ocultas" loading="lazy">
+                        </picture>
+                        <picture>
+                            <source srcset="./media/tarimaexterior5-large.jpg" media="(min-width: 1200px)">
+                            <source srcset="./media/tarimaexterior5-medium.jpg" media="(min-width: 768px)">
+                            <img src="./media/tarimaexterior5.jpg" alt="Pergola de madera marron"
+                                class="card__img imagen__ocultas" loading="lazy">
+                        </picture>
+                    </article>
+                </a>
+
+                <!-- Tercer artículo -->
+                <a href="detalles_card3.html" title="Detalles del tercer artículo">
+                    <article class="card card3 agrandar">
+                        <div id="detalleCardContainer3"></div>
+                        <picture>
+                            <source srcset="./media/puertaAmarilla-large.jpg" media="(min-width: 1200px)">
+                            <source srcset="./media/puertaAmarilla-medium.jpg" media="(min-width: 768px)">
+                            <img src="./media/puertaAmarilla.jpg" alt="Puerta amarilla interior"
+                                class="card__img imagen__ocultas" loading="lazy">
+                        </picture>
+                        <picture>
+                            <source srcset="./media/puertaExterior-large.jpg" media="(min-width: 1200px)">
+                            <source srcset="./media/puertaExterior-medium.jpg" media="(min-width: 768px)">
+                            <img src="./media/puertaExterior.jpg" alt="Puerta exterior"
+                                class="card__img imagen__ocultas" loading="lazy">
+                        </picture>
+                        <picture>
+                            <source srcset="./media/puertaCorredera-large.jpg" media="(min-width: 1200px)">
+                            <source srcset="./media/puertaCorredera-medium.jpg" media="(min-width: 768px)">
+                            <img src="./media/puertaCorredera.jpg" alt="Puerta corredera blanca"
+                                class="card__img imagen__ocultas" loading="lazy">
+                        </picture>
+                        <picture>
+                            <source srcset="./media/puertaInterior-large.jpg" media="(min-width: 1200px)">
+                            <source srcset="./media/puertaInterior-medium.jpg" media="(min-width: 768px)">
+                            <img src="./media/puertaInterior.jpg" alt="Puerta interior blanca paso"
+                                class="card__img imagen__ocultas" loading="lazy">
+                        </picture>
+                        <picture>
+                            <source srcset="./media/puertaNegra-large.jpg" media="(min-width: 1200px)">
+                            <source srcset="./media/puertaNegra-medium.jpg" media="(min-width: 768px)">
+                            <img src="./media/puertaNegra.jpg" alt="Puerta entrada negra"
+                                class="card__img imagen__ocultas" loading="lazy">
+                        </picture>
+                        <picture>
+                            <source srcset="./media/ManillasPuerta-large.jpg" media="(min-width: 1200px)">
+                            <source srcset="./media/ManillasPuerta-medium.jpg" media="(min-width: 768px)">
+                            <img src="./media/ManillasPuerta.jpg" alt="Tipo Manilla Puerta"
+                                class="card__img imagen__ocultas" loading="lazy">
+                        </picture>
+                    </article>
+                </a>
+                </article>
+            </a>
+
+
+           <!-- Cuarto artículo -->
+           <a href="detalles_card4.html" title="Detalles del cuarto artículo">
+            <article class="card card4 agrandar">
+                <div id="detalleCardContainer4"></div>
+                <picture>
+                    <source srcset="./media/escaleraCaracol-large.jpg" media="(min-width: 1200px)">
+                    <source srcset="./media/escaleraCaracol-medium.jpg" media="(min-width: 768px)">
+                    <img src="./media/escaleraCaracol-min.jpg" alt="Escalera Caracol madera"
+                        class="card__img imagen__ocultas" loading="lazy">
+                </picture>
+                <picture>
+                    <source srcset="./media/EscaleraMadera-large.jpg" media="(min-width: 1200px)">
+                    <source srcset="./media/EscaleraMadera-medium.jpg" media="(min-width: 768px)">
+                    <img src="./media/EscaleraMadera.jpg" alt="Escalera madera salon"
+                        class="card__img imagen__ocultas" loading="lazy">
+                </picture>
+                <picture>
+                    <source srcset="./media/escaleraMadera2-large.jpg" media="(min-width: 1200px)">
+                    <source srcset="./media/escaleraMadera2-medium.jpg" media="(min-width: 768px)">
+                    <img src="./media/escaleraMadera2-min.jpg" alt="Escalera caracol"
+                        class="card__img imagen__ocultas" loading="lazy">
+                </picture>
+                <picture>
+                    <source srcset="./media/escaleraMadera3-large.jpg" media="(min-width: 1200px)">
+                    <source srcset="./media/escaleraMadera3-medium.jpg" media="(min-width: 768px)">
+                    <img src="./media/escaleraMadera3-min.jpg" alt="Escalera roble caracol"
+                        class="card__img imagen__ocultas" loading="lazy">
+                </picture>
+                <picture>
+                    <source srcset="./media/escaleraMadera4-large.jpg" media="(min-width: 1200px)">
+                    <source srcset="./media/escaleraMadera4-medium.jpg" media="(min-width: 768px)">
+                    <img src="./media/escaleraMadera4.jpg" alt="Escalera peldaños robles"
+                        class="card__img imagen__ocultas" loading="lazy">
+                </picture>
+                <picture>
+                    <source srcset="./media/EscaleraMadera5-large.jpg" media="(min-width: 1200px)">
+                    <source srcset="./media/EscaleraMadera5-medium.jpg" media="(min-width: 768px)">
+                    <img src="./media/EscaleraMadera5-min.jpg" alt="Escalera de peldaños"
+                        class="card__img imagen__ocultas" loading="lazy">
+                </picture>
+            </article>
+        </a>
+
+        <!-- Quinto artículo -->
+        <a href="detalles_card5.html" title="Detalles del quinto artículo">
+            <article class="card card5 agrandar">
+                <div id="detalleCardContainer5"></div>
+                <picture>
+                    <source srcset="./media/juegoComedor-large.jpg" media="(min-width: 1200px)">
+                    <source srcset="./media/juegoComedor-medium.jpg" media="(min-width: 768px)">
+                    <img src="./media/juegoComedor.jpg" alt="Juego de comedor oscuro"
+                        class="card__img imagen__ocultas" loading="lazy">
+                </picture>
+                <picture>
+                    <source srcset="./media/juegocomedor1-large.jpg" media="(min-width: 1200px)">
+                    <source srcset="./media/juegocomedor1-medium.jpg" media="(min-width: 768px)">
+                    <img src="./media/juegocomedor1.jpg" alt="Juego de comedor oscuro"
+                        class="card__img imagen__ocultas" loading="lazy">
+                </picture>
+                <picture>
+                    <source srcset="./media/juegocomedor2-large.jpg" media="(min-width: 1200px)">
+                    <source srcset="./media/juegocomedor2-medium.jpg" media="(min-width: 768px)">
+                    <img src="./media/juegocomedor2.jpg" alt="Juego de comedor claro"
+                        class="card__img imagen__ocultas" loading="lazy">
+                </picture>
+                <picture>
+                    <source srcset="./media/juegocomedor3-large.jpg" media="(min-width: 1200px)">
+                    <source srcset="./media/juegocomedor3-medium.jpg" media="(min-width: 768px)">
+                    <img src="./media/juegocomedor3.jpg" alt="Juego de comedor claro"
+                        class="card__img imagen__ocultas" loading="lazy">
+                </picture>
+                <picture>
+                    <source srcset="./media/juegocomedor4-large.jpg" media="(min-width: 1200px)">
+                    <source srcset="./media/juegocomedor4-medium.jpg" media="(min-width: 768px)">
+                    <img src="./media/juegocomedor4.jpg" alt="Juego de comedor blanco"
+                        class="card__img imagen__ocultas" loading="lazy">
+                </picture>
+            </article>
+        </a>
+
+        <!-- Sexto artículo -->
+        <a href="detalles_card6.html" title="Detalles del sexto artículo">
+            <article class="card card6 agrandar">
+                <div id="detalleCardContainer6"></div>
+                <picture>
+                    <source srcset="./media/hotel-large.jpg" media="(min-width: 1200px)">
+                    <source srcset="./media/hotel-medium.jpg" media="(min-width: 768px)">
+                    <img src="./media/hotel.-min.jpg" alt="Pasillo hotel puertas"
+                        class="card__img imagen__ocultas" loading="lazy">
+                </picture>
+                <picture>
+                    <source srcset="./media/hotel1-large.jpg" media="(min-width: 1200px)">
+                    <source srcset="./media/hotel1-medium.jpg" media="(min-width: 768px)">
+                    <img src="./media/hotel1-min.jpg" alt="Pasillo hotel puertas"
+                        class="card__img imagen__ocultas" loading="lazy">
+                </picture>
+                <picture>
+                    <source srcset="./media/hotel2-large.jpg" media="(min-width: 1200px)">
+                    <source srcset="./media/hotel2-medium.jpg" media="(min-width: 768px)">
+                    <img src="./media/hotel2-min.jpg" alt="Salona ntiguo imitacion madera"
+                        class="card__img imagen__ocultas" loading="lazy">
+                </picture>
+                <picture>
+                    <source srcset="./media/hotel3-large.jpg" media="(min-width: 1200px)">
+                    <source srcset="./media/hotel3-medium.jpg" media="(min-width: 768px)">
+                    <img src="./media/hotel3.jpg" alt="Pasillo puertas roble hotel"
+                        class="card__img imagen__ocultas" loading="lazy">
+                </picture>
+                <picture>
+                    <source srcset="./media/hotel4-large.jpg" media="(min-width: 1200px)">
+                    <source srcset="./media/hotel4-medium.jpg" media="(min-width: 768px)">
+                    <img src="./media/hotel4.jpg" alt="Puertas oscuras hotel"
+                        class="card__img imagen__ocultas" loading="lazy">
+                </picture>
+            </article>
+        </a>
+
+
+    </div>
+</section>
+ <!-- Video de fondo -->
+ <div class="video-fondo">
+    <video id="video-fondo" autoplay muted loop poster="ruta-del-poster.jpg">
+        <source src="./media/videoFondoCarpinteria." type="video/webm">
+        <source src="./media/videoFondoCarpinteria.mp4" type="video/mp4">
+        Tu navegador no soporta la etiqueta de video.
+    </video>
+</div>
+
+
+        </div>
+
+        </section>
+           <!-- Texto explicativo de las marcas -->
+    
+                    <h3 class="Texto__distribuidores">Somos distribuidores oficiales de</h3>
+
+
+
+                <!-- Carrusel de logos de marcas -->
+                <div class="logos-outer-container">
+                    <div class="logos-container">
+            <a href="#" target="_blank" rel="noreferrer">
+                <img src="./media/maderalogo1.png" alt="Logo Marca 1" class="logo__carrusel">
+            </a>
+            <a href="#" target="_blank" rel="noreferrer">
+                <img src="./media/maderalogo2.png" alt="Logo Marca 2" class="logo__carrusel">
+            </a>
+            <a href="#" target="_blank" rel="noreferrer">
+                <img src="./media/maderalogo3.jpg" alt="Logo Marca 3" class="logo__carrusel">
+            </a>
+            <a href="#" target="_blank" rel="noreferrer">
+                <img src="./media/logo1.jpg" alt="Logo Marca 4" class="logo__carrusel">
+            </a>
+            <a href="#" target="_blank" rel="noreferrer">
+                <img src="./media/logo5.jpg" alt="Logo Marca 5" class="logo__carrusel">
+            </a>
+            <a href="#" target="_blank" rel="noreferrer">
+                <img src="./media/logo6.jpg" alt="Logo Marca 6" class="logo__carrusel">
+            </a>
+        </div>
+    </div>
+    <section class="formulario-contacto">
+        <h2 class="contacta__conNosotros">Contacta con nosotros</h2>
+        <form action="" method="POST" enctype="multipart/form-data" onsubmit="return false;">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+    
+            <label for="mensaje">Mensaje:</label><br>
+            <textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea><br><br>
+    
+            <label for="archivo">Adjuntar archivo:</label>
+            <!-- Botón "Elegir archivo" deshabilitado -->
+        <input type="button" value="Elegir archivo" disabled class="boton__elegir__archivo"><br><br>
+    
+            <button type="submit" disabled>Enviar</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__logo">
+                <img src="./media/imagenlogoempresa.jpg" alt="Logo de la empresa">
+            </div>
+            <div class="footer__legal-links">
+                Aviso legal
+                <span>|</span>
+                Política de privacidad
+                <span>|</span>
+                Política de cookies
+            </div>
+            <div class="footer__social">
+                <a href="#" class="social-icon" title="Visítanos en Facebook" target="_blank" rel="noreferrer">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-icon" title="Síguenos en Twitter" target="_blank" rel="noreferrer">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-icon" title="Síguenos en Instagram" target="_blank" rel="noreferrer">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    
+    <script src="./script/script.js" defer></script><!--para linkear javaScript cuando termine con html-->
+</body>
+
+</html>
